@@ -1,0 +1,468 @@
+#formDest--Form--RFLayout {
+    background: transparent !important;
+}
+
+#idnomcliente,
+#idnomclienteP5 {
+    float: left;
+}
+
+
+#idblanco3F4,
+#idblanco3F4P5 {
+    float: right;
+    
+}
+
+#idfecha,
+#idfechaP5 {
+    float: left;
+}
+
+#__container0--Panel-cont0_0 {
+    width: 40%!important;
+    
+    background-color: #D7EBF1;
+}
+
+#pant--Form--RFLayout {
+    background-color: #D7EBF2;
+}
+
+/*      PANEL DERECHO CREACION PEDIDOS      */
+
+#__container4--Panel {
+    background-color: #D6E5EF;
+    /* meter algo de margen aqui  bcf3ff*/
+    border: #000 2px solid;
+    border-radius: 5px;
+    margin-right: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+/*#__panel0-cont,*/
+/*#__panel1-cont,*/
+/*#__panel2-cont,*/
+/*#__panel3-cont,*/
+/*#__panel4-cont {*/
+    /*background:linear-gradient(#1F88B6,#7CDEE3);*/
+    /*	background-color:#D2E7F0;*/
+/*    background-color: #D7EBF2;*/
+/*    margin: 5px;*/
+/*    padding: 5px;*/
+/*}*/
+
+
+#__container9--Panel {
+    padding-left: 5px;
+    background-color: #D6E5EF;
+    border: #000 2px solid;
+    border-radius: 10px;
+}
+
+
+/** Background global **/
+
+/*#__panel0-cont,*/
+/*#__panel1-cont,*/
+/*#__panel2-cont,*/
+/*#__panel3-cont,*/
+/*#__panel4-cont {*/
+/*    background: linear-gradient(#1F88B6, #7CDEE3);*/
+/*    border-left: 1px solid;*/
+/*    border-right: 1px solid;*/
+/*    height: 94%;*/
+    /* Necesario para que ocupe toda la pantalla el contenido de los containers*/
+/*    border-bottom: 1px solid;*/
+/*    border-bottom-left-radius: 10px;*/
+/*    border-bottom-right-radius: 10px;*/
+/*}*/
+
+#__panel4-hdr {
+    background-color: #D2E7F0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top: 3px solid;
+    border-bottom: 1px dotted;
+    padding-left: 5px;
+    border-left: 1px solid;
+    border-right: 1px solid;
+}
+
+#__panel0-title,
+#__panel1-title,
+#__panel2-title,
+#__panel3-title,
+#__panel4-title {
+    font-size: 16px;
+}
+
+#pant--Form {
+    border: #000 1px solid;
+    border-radius: 5px;
+}
+
+#__panel0-hdr,
+#__panel1-hdr,
+#__panel2-hdr,
+#__panel3-hdr,
+#__panel4-hdr {
+    background-color: #D2E7F0;
+}
+
+#sf1--Form--RFLayout,
+#sf1P5--Form--RFLayout {
+    background-color: transparent;
+}
+
+/*Celda Caja de texto*/
+
+.inputTableFormat tbody>tr>td>div>div>input {
+    padding-right: 0.2rem;
+    padding-left: 0.2rem;
+    height: 2rem;
+}
+
+.inputTableFormat tbody>tr>td>div {
+    padding: 0rem;
+    height: 1.7rem;
+}
+
+.inputTableFormat tbody>tr>td>div>div {
+    padding: 0rem;
+    height: 1.7rem;
+}
+
+.inputTableFormat tbody>tr>td {
+    padding: 0.1rem 0.2rem 0.2rem 0.2rem !important;
+}
+
+.inputTableFormat tbody>tr {
+    height: 1.8rem;
+}
+
+#sf1 .sapMLabel {
+    color: #00001C;
+}
+
+#sf2 .sapMLabel {
+    color: #00001C;
+}
+
+/**ALIGN VALUE HELPERS WITH INPUT **/
+
+#idTable2 .sapMInputValHelpInner {
+    line-height: 1.3rem!important;
+}
+
+#sf1 .sapMInputValHelpInner {
+    line-height: 1.35rem!important;
+}
+
+
+/**ALIGN LABEL WITH INPUT **/
+
+#sf1 .sapUiFormEdit.sapUiFormM .sapUiRLElementWithLabel>.sapUiRFLRow:not(.sapUiRFLCompleteRow)>.sapUiRFLContainer:first-child>.sapUiRFLContainerContent {
+    padding-top: 0.5rem !important;
+}
+
+
+/**ALIGN ICON WITH INPUT **/
+
+#sf1 .sapMDP>.sapUiIcon,
+.sapMDP.sapMInputIE9>.sapUiIcon {
+    line-height: 1.5rem !important;
+}
+
+#sf1 .sapMInputBase {
+    margin: 0!important;
+    padding: 0!important;
+    height: 1.8rem;
+}
+
+/** sf1 inputs **/
+
+#sf1 .sapMInputBaseInner {
+    font-family: Arial, Helvetica, sans-serif!important;
+    font-size: 12px!important;
+    padding: 0!important;
+    padding-left: 0.75em!important;
+    margin: 1px !important;
+    height: 1.8rem;
+    color: #000000;
+}
+
+
+/** Texto en el centro para los inputs*/
+
+#idTable2 .sapMInputBaseInner {
+    height: 2rem!important;
+    font-family: Arial, Helvetica, sans-serif!important;
+    font-size: 12px!important;
+}
+
+#sf1 .sapMLabel,
+#sf2 .sapMLabel {
+    font-family: Arial, Helvetica, sans-serif!important;
+    font-size: 12px!important;
+}
+
+#idTable2 .sapMListTbl .sapMLIBSelectD>.sapUiIcon {
+    font-size: 1.5rem;
+    padding: 0 !important;
+}
+
+
+/** Header de la tabla **/
+
+#idTable2 .sapMListTblHeaderCell {
+    padding: 0.5em !important;
+    margin: 0.5em !important;
+    background: #a8a8a8 !important;
+}
+
+/*#idTable2 .th.sapMListTblSelCol {*/
+/*    background: #a6a7a8 !important;*/
+/*}*/
+
+#idTable2 .sapMListTbl th{
+	background: #a6a7a8 !important;
+}
+
+#buttonAddRow {
+    heigth: 16px;
+    width: 16px;
+}
+
+#idmaterial,
+#idposicion,
+#idprecio1,
+#idprecio2,
+#idincotermfas,
+#idcondcobro,
+#idalmacenpag,
+#idlugar,
+#idblanco,
+#idcomercial,
+#idblanco2,
+#idblanco3,
+#idmaterialP5,
+#idposicionP5,
+#idprecio1P5,
+#idprecio2P5,
+#idincotermfasP5,
+#idcondcobroP5,
+#idalmacenpagP5,
+#idlugarP5,
+#idblancoP5,
+#idcomercialP5,
+#idblanco2P5,
+#idblanco3P5 {
+    float: left;
+}
+/*#B8B8B8*/
+.blurred {
+    background-color: #a8a8a8;
+}
+
+.sapMPanelHdr {
+    background-color: #60a0bc;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    margin: 5px;
+    padding: 5px;
+}
+
+/*.sapUiPanelTitle{        */
+
+.sapMPanelHdr {
+    background-color: #60a0bc;
+}
+
+.smallLetters {
+    font-family: Arial, Helvetica, sans-serif!important;
+    font-size: 11px!important;
+}
+
+.boldLetters {
+    font-weight: bold!important;
+    font-family: Arial, Helvetica, sans-serif!important;
+    font-size: 12px!important;
+}
+
+.importantText {
+    font-weight: lighter!important;
+    font-size: 14px!important;
+}
+
+#Idriesgomax,
+#Idriesgodispu,
+#Idriesgodispo,
+#IdriesgomaxP5,
+#IdriesgodispuP5,
+#IdriesgodispoP5 {
+    /*background-color:#8391CC;*/
+    border: #000 2px solid;
+}
+
+#sf2--Form--RFLayout,
+#sf2P5--Form--RFLayout {
+    background-color: #D6E5EF;
+    border: #000 2px solid;
+    border-radius: 10px;
+}
+
+
+/** SF1 Panels, first two */
+#__container2--Panel,
+#__container3--Panel {
+    background-color: #D6E5EF;
+    border: #000 2px solid;
+    border-radius: 10px;
+    padding-bottom: 5px;
+}
+
+#__container2--Panel {
+    margin-left: 5px;
+    padding-left: 5px;
+}
+
+#idContainer-cont {
+    background-color: #D6E5EF;
+}
+
+.sapUiPanelHdr {
+    background-color: #60a0bc;
+    /*background:#D2E7F0;*/
+}
+
+#rdBarcos-cont0_0 {
+    width: 60% !important;
+}
+
+
+/* Borra el icono del datepicker en la tabla */
+
+.sapUiTableCell>div>.sapUiTfDateIcon {
+    background-image: none;
+}
+
+.addRowButton {
+    height: 24px !important;
+    width: 24px !important;
+}
+
+.sapUiLocalBusyIndicatorBox {
+    height: 10px !important;
+    width: 10px !important;
+    margin-top: 18px !important;
+}
+
+.highlightedColumn {
+    background: #0381b7;
+}
+
+
+/** MENOS ESPACIO ENTRE FORMS**/
+
+#idView3 .sapUiFormResLayout>div {
+    padding: 5px!important;
+    margin: 2px!important;
+}
+
+#idView3 .sapUiForm .sapMLabel:after {
+    content: "";
+    
+}
+
+/* Aumenta el tamaño del scrollbar en la tabla 1 */
+
+
+/*#idTable .sapUiTableHSb, #idTable-hsb {
+    height: 2.5em;
+}*/
+
+
+/*** Actualización UI5 ***/
+/* Paneles */
+
+.sapMPanel .sapMPanelHdr {
+    background-color: #60a0bc;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    margin: 5px;
+    padding: 5px;
+    height: 1.2rem;
+    font-family: "72","72full",Arial,Helvetica,sans-serif;
+    font-size: 1.2rem !important;
+    font-weight: bold !important;
+    color: #32363a;
+}
+
+.sapMPanel .sapMPanelContent {
+	background: linear-gradient(#1F88B6, #7CDEE3);
+    border-left: 1px solid;
+    border-right: 1px solid;
+    height: 94%;
+    border-bottom: 1px solid;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.sapMPanel .sapUiFormResGrid, .sapMPanel .sapMPanelContent .sapUiVlt {
+	background-color: #D7EBF2;
+}
+
+/* Panel Vista 2 y Vista 3 */
+.sapMPanel .sapMPanelContent .sapUiVlt {
+	width: 100%;
+}
+
+div[id$='tableView2'].sapUiBlockScrollingRow .sapUiBlockScrollableCell{
+	width: 100%;
+}
+
+/* Tabla Vista 3 */
+/* Boton de eliminar fila */
+.table2 .sapMListTblHeaderCell:nth-last-child(2){
+	width: 3rem;
+}
+
+.table2{
+	overflow-x: scroll;
+}
+
+div[id$='tableView3'].sapUiBlockScrollingRow .sapUiBlockScrollableCell{
+	width: 100%;
+}
+
+.customSize{
+	width: 100%!important;
+	overflow: scroll !important;
+}
+
+.inputCustom.sapMInputBase{
+    height: 2rem;
+    margin-top: 0!important;
+}
+
+.customButton{
+	background-color: white!important;
+    border-radius: 4px;
+}
+
+.btnVersion span{
+	background: transparent;
+	border: none;
+}

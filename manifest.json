@@ -1,0 +1,160 @@
+{
+	"_version": "1.12.3",
+	"sap.app": {
+		"id": "sd_dfgrupo.sd_dfgrupo",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "23.0.15"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"flexEnabled": false,
+		"rootView": {
+			"viewName": "sd_dfgrupo.sd_dfgrupo.view.App",
+			"type": "XML",
+			"async": true,
+			"id": "App"
+		},
+		"dependencies": {
+			"minUI5Version": "1.65.6",
+			"libs": {
+				"sap.ui.layout": {},
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "sd_dfgrupo.sd_dfgrupo.i18n.i18n"
+				}
+			},
+			"appData": {
+				"type": "sap.ui.model.json.JSONModel"
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "sd_dfgrupo.sd_dfgrupo.view",
+				"controlAggregation": "pages",
+				"controlId": "app",
+				"clearControlAggregation": false
+			},
+			"routes": [
+				{
+					"name": "RouteApp",
+					"pattern": "RouteApp",
+					"target": [
+						"TargetApp"
+					]
+				},
+				{
+					"name": "View1",
+					"pattern": "",
+					"target": [
+						"view1"
+					]
+				},
+				{
+					"name": "View2",
+					"pattern": "view2",
+					"target": [
+						"view2"
+					]
+				},
+				{
+					"name": "View3",
+					"pattern": "view3",
+					"target": [
+						"view3"
+					]
+				},
+				{
+					"name": "View4",
+					"pattern": "view4",
+					"target": [
+						"view4"
+					]
+				},
+				{
+					"name": "View6",
+					"pattern": "view6",
+					"target": [
+						"view6"
+					]
+				}
+			],
+			"targets": {
+				"TargetApp": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "App",
+					"viewName": "App"
+				},
+				"view1": {
+					"viewName": "View1",
+					"viewId": "view1"
+				},
+				"view2": {
+					"viewName": "View2",
+					"viewId": "view2"
+				},
+				"view3": {
+					"viewName": "View3",
+					"viewId": "view3"
+				},
+				"view4": {
+					"viewName": "View4",
+					"viewId": "view4"
+				},
+				"view6": {
+					"viewName": "View6",
+					"viewId": "view6"
+				}
+			}
+		}
+	},
+	"sap.platform.abap": {
+		"uri": "/sap/bc/ui5_ui5/sap/zupgradeui5/webapp",
+		"_version": "1.1.0"
+	}
+}

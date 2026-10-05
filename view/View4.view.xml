@@ -1,0 +1,172 @@
+<mvc:View controllerName="sd_dfgrupo.sd_dfgrupo.controller.View4" 
+	displayBlock="true" 
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:t="sap.ui.table">
+	
+	<Page id="view4"
+		showHeader="false">
+		<Panel  headerText="{i18n>titleView4}" 
+			expanded="true">
+			<content>
+				<l:HorizontalLayout>
+					<Button text="{i18n>volverView2}"
+						icon="sap-icon://navigation-left-arrow"
+						press="goToView2"/>
+				</l:HorizontalLayout>
+				<l:HorizontalLayout>
+					<t:Table id="idTableDiario"
+						selectionMode="None"
+						selectionBehavior="Row"
+						enableColumnReordering="true"
+						visibleRowCount="18">
+						<t:columns>
+							<t:Column width="11rem">
+									<Label text="{i18n>venta}" />
+								<t:template>
+									<Text text="{Zzventa}" wrapping="false" />
+								</t:template>
+							</t:Column>
+							<t:Column width="11rem">
+									<Label text="{i18n>producto}" />
+								<t:template>
+									<Text text="{Zzproducto}" wrapping="false" />
+								</t:template>
+							</t:Column>
+							<t:Column width="11rem">
+									<Label text="{i18n>clasePedido}" />
+								<t:template>
+									<Text text="{Zzclasepedido}" wrapping="false" />
+								</t:template>
+							</t:Column>
+							<t:Column width="11rem">
+									<Label text="{i18n>clienteDescrip}" />
+								<t:template>
+									<Text text="{Zzdescripcliente}" wrapping="false" />
+								</t:template>
+							</t:Column>
+							<t:Column width="11rem">
+									<Label text="{i18n>posicion}" />
+								<t:template>
+									<Text text="{Zzposicion}" wrapping="false" />
+								</t:template>
+							</t:Column>
+							<t:Column width="11rem">
+									<Label text="{i18n>vendidas}" />
+								<t:template>
+									<Text text="{Zzvendidas}" wrapping="false" />
+								</t:template>
+							</t:Column>
+							<t:Column width="11rem">
+									<Label text="{i18n>servidas}" />
+								<t:template>
+									<Text text="{Zzservidas}" wrapping="false" />
+								</t:template>
+							</t:Column>
+							<t:Column width="11rem">
+									<Label text="{i18n>pendientes}" />
+								<t:template>
+									<Text text="{Zzpendientes}" wrapping="false" />
+								</t:template>
+							</t:Column>
+							<t:Column width="11rem">
+									<Label text="{i18n>fechaVta}" />
+								<t:template>
+									<Text text="{Zzfechaventa}" wrapping="false" />
+								</t:template>
+							</t:Column>
+							<t:Column width="11rem">
+									<Label text="{i18n>fechaVenceVta}" />
+								<t:template>
+									<Text text="{Zzfechavenciventa}" wrapping="false" />
+								</t:template>
+							</t:Column>
+							<t:Column width="11rem">
+									<Label text="{i18n>fechaVenceFct}" />
+								<t:template>
+									<Text text="{Zzfechavencifactura}" wrapping="false" />
+								</t:template>
+							</t:Column>
+							<t:Column width="11rem">
+									<Label text="{i18n>precioPedidoVta}" />
+								<t:template>
+									<Text text="{Zzpreciopedidov}" wrapping="false" />
+								</t:template>
+							</t:Column>
+							<t:Column width="11rem">
+									<Label text="{i18n>cliente}" />
+								<t:template>
+									<Text text="{Zzcliente}" wrapping="false" />
+								</t:template>
+							</t:Column>
+							<t:Column width="11rem">
+									<Label text="{i18n>posventa}" />
+								<t:template>
+									<Text text="{Zzposventa}" wrapping="false" />
+								</t:template>
+							</t:Column>
+							<t:Column width="11rem">
+									<Label text="{i18n>partida}" />
+								<t:template>
+									<Text text="{Zzpartida}" wrapping="false" />
+								</t:template>
+							</t:Column>
+							<t:Column width="11rem">
+									<Label text="{i18n>barco}" />
+								<t:template>
+									<Text text="{Zzbarco}" wrapping="false" />
+								</t:template>
+							</t:Column>
+							<t:Column width="11rem">
+									<Label text="{i18n>facturadas}" />
+								<t:template>
+									<Text text="{Zzfacturadas}" wrapping="false" />
+								</t:template>
+							</t:Column>
+							<t:Column width="11rem">
+									<Label text="{i18n>sinFacturar}" />
+								<t:template>
+									<Text text="{Zzsinfacturar}" wrapping="false" />
+								</t:template>
+							</t:Column>
+							<t:Column width="11rem">
+									<Label text="{i18n>impPte}" />
+								<t:template>
+									<Text text="{Zzimppendiente}" wrapping="false" />
+								</t:template>
+							</t:Column>
+							<t:Column width="11rem">
+									<Label text="{i18n>factura}" />
+								<t:template>
+									<Text text="{Zzfactura}" wrapping="false" />
+								</t:template>
+							</t:Column>
+							<t:Column width="11rem">
+									<Label text="{i18n>serie}" />
+								<t:template>
+									<Text text="{Zzserie}" wrapping="false" />
+								</t:template>
+							</t:Column>
+							<t:Column width="11rem">
+									<Label text="{i18n>fechaEmitFct}" />
+								<t:template>
+									<Text text="{Zzfechaemifact}" wrapping="false" />
+								</t:template>
+							</t:Column>
+							<t:Column width="11rem">
+									<Label text="{i18n>grupo}" />
+								<t:template>
+									<Text text="{Zzgrupo}" wrapping="false" />
+								</t:template>
+							</t:Column>
+						</t:columns>
+					</t:Table>
+				</l:HorizontalLayout>	
+			</content>
+		</Panel>
+	</Page>
+	
+</mvc:View>

@@ -1,0 +1,232 @@
+<mvc:View controllerName="sd_dfgrupo.sd_dfgrupo.controller.View2" 
+	displayBlock="true" 
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:l="sap.ui.layout"
+	xmlns:t="sap.ui.table">
+<Page id="view2"
+	showHeader="false">
+	<content>
+		<Panel	headerText="{i18n>titleView2}" 
+				expanded="true">
+			<content>
+				<l:VerticalLayout>
+					<l:BlockLayout>
+						<l:BlockLayoutRow id="buttonBar"
+							class="sapUiNoMarginTop sapUiNoMarginBottom sapUiNoMarginBegin sapUiNoContentPadding">
+							<l:BlockLayoutCell>
+								<Button id="idButton212"
+									text="{i18n>volverView1}"
+									icon="sap-icon://navigation-left-arrow"
+									press="goToView1"/>
+								<Button id="idButton333"
+									text="{i18n>diarioVentas}"
+									press="goToView4"/>
+								<Button id="b3"
+									text="{i18n>pedidosCreados}"
+									press="onGoToPedidosCreados"/>
+								<Button id="idButton222"
+									text="{i18n>creacionPedido}"
+									icon="sap-icon://cart"
+									press="onCreaPedidoVentas"/>
+							</l:BlockLayoutCell>
+						</l:BlockLayoutRow>
+						<l:BlockLayoutRow id="tableView2"
+							scrollable="true"
+							class="sapUiNoMarginTop sapUiNoMarginBottom sapUiNoMarginBegin sapUiNoContentPadding">
+								<l:BlockLayoutCell>
+									<t:Table id="idTable"
+										selectionMode="MultiToggle"
+										selectionBehavior="Row"
+										enableColumnReordering="true"
+										visibleRowCount="18"
+										rows="{zst09data>/}">
+										<t:columns>
+											<t:Column width="7rem" visible="{appData>/visibleColumns/codMaterial}"
+												filterProperty="Matnr"
+												sortProperty="Matnr">
+													<Label text="{i18n>matnr}" />
+												<t:template>
+													<Text text="{zst09data>Matnr}" wrapping="false" />
+												</t:template>
+											</t:Column>
+											<t:Column width="20rem"
+												filterProperty="Maktx"
+												sortProperty="Maktx">
+													<Label text="{i18n>maktx}" />
+												<t:template>
+													<Text text="{zst09data>Maktx}" wrapping="false" />
+												</t:template>
+											</t:Column>
+											<t:Column width="12rem"
+												filterProperty="Zznombarco"
+												sortProperty="Zznombarco">
+													<Label text="{i18n>nombreBarco}" />
+												<t:template>
+													<Text text="{zst09data>Zznombarco}" wrapping="false" />
+												</t:template>
+											</t:Column>
+											<t:Column width="7rem" visible="{appData>/visibleColumns/codAlmacen}"
+												filterProperty="Lgort"
+												sortProperty="Lgort">
+													<Label text="{i18n>lgort}" />
+												<t:template>
+													<Text text="{zst09data>Lgort}" wrapping="false" />
+												</t:template>
+											</t:Column>
+											<t:Column width="10rem"
+												filterProperty="Lgobe"
+												sortProperty="Lgobe">
+													<Label text="{i18n>lgobe}" />
+												<t:template>
+													<Text text="{zst09data>Lgobe}" wrapping="false" />
+												</t:template>
+											</t:Column>
+											<t:Column width="8rem"
+												filterProperty="Zdisponible"
+												sortProperty="Zdisponible">
+													<Label text="{i18n>stockDispo}" />
+												<t:template>
+													<Text text="{zst09data>Zdisponible}" wrapping="false" />
+												</t:template>
+											</t:Column>
+											<t:Column width="6rem"
+												filterProperty="Zpventa"
+												sortProperty="Zpventa">
+													<Label text="{i18n>precioVta}" />
+												<t:template>
+													<Text text="{zst09data>Zpventa}" wrapping="false" />
+												</t:template>
+											</t:Column>
+											<t:Column width="10rem"
+												filterProperty="Zobserva"
+												sortProperty="Zobserva">
+													<Label text="{i18n>observaciones}" />
+												<t:template>
+													<Text text="{zst09data>Zobserva}" wrapping="false" />
+												</t:template>
+											</t:Column>
+											<t:Column width="7rem"
+												filterProperty="Charg"
+												sortProperty="Charg">
+													<Label text="{i18n>charg}" />
+												<t:template>
+													<Text text="{zst09data>Charg}" wrapping="false" />
+												</t:template>
+											</t:Column>
+											<t:Column width="7rem"
+												filterProperty="Werks"
+												sortProperty="Werks">
+													<Label text="{i18n>werks}" />
+												<t:template>
+													<Text text="{zst09data>Werks}" wrapping="false" />
+												</t:template>
+											</t:Column>
+											<t:Column width="7rem"
+												filterProperty="Mtart"
+												sortProperty="Mtart">
+													<Label text="{i18n>mtart}" />
+												<t:template>
+													<Text text="{zst09data>Mtart}" wrapping="false" />
+												</t:template>
+											</t:Column>
+											<t:Column width="7rem"
+												filterProperty="Ebelp"
+												sortProperty="Ebelp">
+													<Label text="{i18n>ebelp}" />
+												<t:template>
+													<Text text="{zst09data>Ebelp}" wrapping="false" />
+												</t:template>
+											</t:Column>
+											<t:Column width="9rem"
+												filterProperty="Ebeln"
+												sortProperty="Ebeln">
+													<Label text="{i18n>ebeln}" />
+												<t:template>
+													<Text text="{zst09data>Ebeln}" wrapping="false" />
+												</t:template>
+											</t:Column>
+											<t:Column width="9rem" visible="{appData>/visibleColumns/ctdUnitCompra}"
+												filterProperty="Zcompra"
+												sortProperty="Zcompra">
+													<Label text="{i18n>ctdCompra}" />
+												<t:template>
+													<Text text="{zst09data>Zcompra}" wrapping="false" />
+												</t:template>
+											</t:Column>
+											<t:Column width="9rem" visible="{appData>/visibleColumns/ctdUnitTraspaso}"
+												filterProperty="Ztraspaso"
+												sortProperty="Ztraspaso">
+													<Label text="{i18n>ctdTraspaso}" />
+												<t:template>
+													<Text text="{zst09data>Ztraspaso}" wrapping="false" />
+												</t:template>
+											</t:Column>
+											<t:Column width="9rem" visible="{appData>/visibleColumns/ctdUnitVenta}"
+												filterProperty="Zventa"
+												sortProperty="Zventa">
+													<Label text="{i18n>ctdVenta}" />
+												<t:template>
+													<Text text="{zst09data>Zventa}" wrapping="false" />
+												</t:template>
+											</t:Column>
+											<t:Column width="9rem" visible="{appData>/visibleColumns/ctdUnitRetirado}"
+												filterProperty="Zretirado"
+												sortProperty="Zretirado">
+													<Label text="{i18n>ctdRetirada}" />
+												<t:template>
+													<Text text="{zst09data>Zretirado}" wrapping="false" />
+												</t:template>
+											</t:Column>
+											<t:Column width="11rem" visible="{appData>/visibleColumns/ctdUnitPteRetira}"
+												filterProperty="Zpretirar"
+												sortProperty="Zpretirar">
+													<Label text="{i18n>ctdPteRetirada}" />
+												<t:template>
+													<Text text="{zst09data>Zpretirar}" wrapping="false" />
+												</t:template>
+											</t:Column>
+											<t:Column width="11rem"
+												filterProperty="Zsubcontra"
+												sortProperty="Zsubcontra">
+													<Label text="{i18n>ctdSubco}" />
+												<t:template>
+													<Text text="{zst09data>Zsubcontra}" wrapping="false" />
+												</t:template>
+											</t:Column>
+											<t:Column width="9rem" visible="{appData>/visibleColumns/ctdUnitStock}"
+												filterProperty="Zstock"
+												sortProperty="Zstock">
+													<Label text="{i18n>stockFisico}" />
+												<t:template>
+													<Text text="{zst09data>Zstock}" wrapping="false" />
+												</t:template>
+											</t:Column>
+											<t:Column width="9rem" visible="{appData>/visibleColumns/costeAdquisic}"
+												filterProperty="Zcoste"
+												sortProperty="Zcoste">
+													<Label text="{i18n>costeAdq}" />
+												<t:template>
+													<Text text="{zst09data>Zcoste}" wrapping="false" />
+												</t:template>
+											</t:Column>
+											<t:Column width="9rem"
+												filterProperty="Zfabricacion"
+												sortProperty="Zfabricacion">
+													<Label text="{i18n>dispoPteFab}" />
+												<t:template>
+													<Text text="{zst09data>Zfabricacion}" wrapping="false" />
+												</t:template>
+											</t:Column>
+										</t:columns>
+									</t:Table>
+								</l:BlockLayoutCell>
+						</l:BlockLayoutRow>
+					</l:BlockLayout>
+				</l:VerticalLayout>
+			</content>
+		</Panel>
+	</content>
+</Page>
+</mvc:View>

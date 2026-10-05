@@ -1,0 +1,139 @@
+<mvc:View controllerName="sd_dfgrupo.sd_dfgrupo.controller.View6" displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	<Page id="view6"
+		showHeader="false">
+		<content>
+			<Panel headerText="{i18n>titleView6}" expanded="true">
+				<content>
+					<l:HorizontalLayout>
+						<Button id="b5" text="{i18n>volverView6}" icon="sap-icon://navigation-left-arrow" press="goBack"/>
+					</l:HorizontalLayout>
+					
+					<f:SimpleForm id="formDest"
+						editable="true"
+						layout="ResponsiveGridLayout"
+						labelSpanXL="4"
+						labelSpanL="4"
+						labelSpanM="4"
+						labelSpanS="12"
+						adjustLabelSpan="true"
+						emptySpanXL="4"
+						emptySpanL="4"
+						emptySpanM="4"
+						columnsXL="4"
+						columnsL="4"
+						columnsM="4">
+						
+						<!-- Nombre 1 -->
+						<Label text="{i18n>nombre1}" />
+						<Input id="IDNombre1"
+							required="true"
+							change="onValidarCampo"
+							maxLength="35"
+							fieldGroupIds="datosDestinatario"
+							value="{appData>/destinatario/nombre1}"/>
+							
+						<!-- Nombre 2 -->
+						<Label text="{i18n>nombre2}" />
+						<Input id="IDNombre2"
+							maxLength="35" 
+							value="{appData>/destinatario/nombre2}"/>
+							
+						<!-- Nombre corto -->
+						<Label text="{i18n>nombreCorto}" />
+						<Input id="IDNombreCorto"
+							required="true"
+							change="onValidarCampo"
+							maxLength="10" 
+							fieldGroupIds="datosDestinatario"
+							value="{appData>/destinatario/nombreCorto}"/>
+							
+						<!-- Dirección -->
+						<Label text="{i18n>direccion}" />
+						<Input id="IDDireccion"
+							required="true"
+							change="onValidarCampo"
+							maxLength="35" 
+							fieldGroupIds="datosDestinatario"
+							value="{appData>/destinatario/direccion}"/>
+							
+						<!-- Población -->
+						<Label text="{i18n>poblacion}" />
+						<Input id="IDPoblacion"
+							required="true"
+							change="onValidarCampo"
+							maxLength="35" 
+							fieldGroupIds="datosDestinatario"
+							value="{appData>/destinatario/poblacion}"/>
+							
+						<!-- País -->
+						<Label text="{i18n>pais}" />
+						<Input id="IDValorPais"
+							required="true"
+							change="onValidarCampo"
+							maxLength="35"
+							valueHelpOnly="true"
+							showValueHelp="true"
+							valueHelpRequest="onF4Pais"
+							liveChange="onLiveChangePais"
+							showSuggestion="true"
+							suggestionItems="{/d/results}" 
+							fieldGroupIds="datosDestinatario">
+							<suggestionItems>
+								<core:Item key="{Land1}" text="{Landx}" />
+							</suggestionItems>
+						</Input>
+						<!-- IDKeyPais -->
+						<Input id="IDKeyPais" visible="false" 
+							value="{appData>/destinatario/paisKey}"/>
+							
+						<!-- Región -->
+						<Label text="{i18n>region}" />
+						<Input id="IDValorRegion"
+							required="true"
+							change="onValidarCampo"
+							maxLength="35"
+							valueHelpOnly="true"
+							showValueHelp="true"
+							valueHelpRequest="onF4Region"
+							liveChange="onLiveChangeRegion"
+							showSuggestion="true"
+							suggestionItems="{/d/results}"
+							fieldGroupIds="datosDestinatario">
+							<suggestionItems>
+								<core:Item key="{Bland}" text="{Bezei}" />
+							</suggestionItems>
+						</Input>
+						<!-- IDKeyRegion -->
+						<Input id="IDKeyRegion" visible="false"
+							value="{appData>/destinatario/regionKey}" />
+						
+						<!-- Código postal -->
+						<Label text="{i18n>codPostal}" />
+						<Input id="IDCodPostal"
+							required="true"
+							change="onValidarCampo"
+							maxLength="10" 
+							width="50%"
+							fieldGroupIds="datosDestinatario"
+							value="{appData>/destinatario/codPostal}"/>	
+						
+						<!-- Teléfono -->
+						<Label text="{i18n>tlf}" />
+						<Input id="IDCodTlf"
+							maxLength="16"
+							width="50%"
+							value="{appData>/destinatario/telefono}"/>
+							
+						<Label/>
+						<VBox>
+							<Button id="BtnCrearDireccion" text="{i18n>crearDir}" press="onPressCrearDestinatario" width="100%"/>
+							<Button id="BtnAsignarDireccion" text="{i18n>addDir}" press="onPressAsignarDestinatario"  width="100%" enabled="{appData>/destinatario/asignar}"/>
+							<Input id="NuevoDestino" visible="false" />
+						</VBox>
+					</f:SimpleForm>
+				</content>
+			</Panel>
+		</content>
+	</Page>
+</mvc:View>

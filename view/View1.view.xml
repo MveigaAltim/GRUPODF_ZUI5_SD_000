@@ -1,0 +1,199 @@
+<mvc:View controllerName="sd_dfgrupo.sd_dfgrupo.controller.View1" 
+	displayBlock="true" 
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form">
+	
+	<Page id="view1"
+		showHeader="false">
+					<content>
+						<Panel headerText="{i18n>titleView1}" 
+							expanded="true">
+							<content>
+								<l:BlockLayout>
+									<l:BlockLayoutRow id="selectionScreen" class="sapUiNoMarginTop sapUiNoMarginBottom sapUiNoMarginBegin sapUiNoContentPadding">
+									<l:BlockLayoutCell>
+										<f:SimpleForm 
+											editable="false" 
+											layout="ResponsiveGridLayout" 
+											title="" 
+											labelSpanXL="4" 
+											labelSpanL="4" 
+											labelSpanM="4" 
+											labelSpanS="12"
+											adjustLabelSpan="false" 
+											emptySpanXL="0" 
+											emptySpanL="0" 
+											emptySpanM="0" 
+											emptySpanS="0" 
+											columnsXL="3" 
+											columnsL="3" 
+											columnsM="3"
+											singleContainerFullSize="false">
+													<f:content>
+														<!--<VBox>-->
+														<core:Title text=""/>
+															<!-- WERKS invisible en vista JS -->
+															<Input id="IDWerksLabelF4" visible="false" />
+															<Input id="IDWerksNumberF4" visible="false" />
+															
+															<!-- MATNR -->
+															<Label id="labelMaterial"
+																text="{i18n>matnrF4}"
+																visible="{ShowButtonsByRole>/rdMaterial}" />
+															<Input id="IDMatnrLabelF4"
+																required="false"
+																visible="{ShowButtonsByRole>/rdMaterial}"
+																showValueHelp="true"
+																valueHelpRequest="onF4Matnr"
+																liveChange="onLiveChangeMatnr"
+																width="100%"
+																name="matnr"
+																change="onChangeInput"
+																showSuggestion="true"
+																suggestionItems="{materiales>/d/results}">
+																<suggestionItems>
+																	<core:Item key="{materiales>Matnr}" text="{materiales>Maktg}" />
+																</suggestionItems>
+																<!--<layoutData>-->
+																<!--	<l:GridData span="XL2 L4 M4 S2" />-->
+																<!--</layoutData>-->
+															</Input>
+															
+															<!-- VKORG -->
+															<Label text="{i18n>vkorgF4}" />
+															<Input id="IDOrgVtasLabelF4"
+																required="false"
+																showValueHelp="true"
+																valueHelpRequest="onF4Vkorg"
+																liveChange="onLiveChangeVkorg"
+																change="onChangeVkorg"
+																name="vkorg"
+																width="100%"
+																showSuggestion="true"
+																suggestionItems="{vkorg>/d/results/}">
+																<!--suggestionItems="{/d/results}"-->
+																<suggestionItems>
+																	<core:Item key="{vkorg>Vkorg}" text="{vkorg>VkorgDesc}" />
+																</suggestionItems>
+																<!--<layoutData>-->
+																<!--	<l:GridData span="XL2 L4 M4 S2" />-->
+																<!--</layoutData>-->
+															</Input>
+															
+															<!-- LGORT -->
+															<Label text="{i18n>lgortF4}" />
+															<Input id="IDLgortLabelF4"
+																required="false"
+																showValueHelp="true"
+																valueHelpRequest="onF4Lgort"
+																liveChange="onLiveChangeLgort"
+																name="lgort"
+																change="onChangeInput"
+																showSuggestion="true"
+																suggestionItems="{almacen>/d/results/}">
+																<!--suggestionItems="{/d/results}"-->
+																<suggestionItems>
+																	<core:Item key="{almacen>Lgort}" text="{almacen>Lgobe}" />
+																</suggestionItems>
+																<!--<layoutData>-->
+																<!--	<l:GridData span="XL2 L4 M4 S2" />-->
+																<!--</layoutData>-->
+															</Input>
+															
+															<!-- CheckBox -->
+															<Label id="IDLabelCheckBox" text=""/>
+															<CheckBox id="Idcheckbox"
+																text="{i18n>flagSinCantidad}" 
+																visible="{ShowButtonsByRole>/rdCheckBox}"
+																selected="{appData>/bCheckBox}">
+																<!--<layoutData>-->
+																<!--	<l:GridData span="XL2 L3 M2 S2" />-->
+																<!--</layoutData>-->
+															</CheckBox>
+															
+															<Label id="IDLabelRadioBtn" text=""/>
+															<RadioButtonGroup id="rdGroup" select="onSelectLogistic">
+																<buttons>
+																	<RadioButton id="rdBarcos"
+																		groupName="rdGroup"
+																		text="{i18n>flagBarcos}"
+																		visible="{ShowButtonsByRole>/rdBarcos}"
+																		selected="true" />
+																	<RadioButton id="rdAlmacenes"
+																		groupName="rdGroup" 
+																		text="{i18n>flagAlmacen}" 
+																		visible="{ShowButtonsByRole>/rdAlmacenes}"/>
+																</buttons>
+																<!--<layoutData>-->
+																<!--	<l:GridData span="XL2 L3 M2 S2" />-->
+																<!--</layoutData>-->
+															</RadioButtonGroup>
+															
+															
+															<!-- BUSCAR -->
+															<Label id="IDLabelBtnBuscar" text=""/>
+															<Button id="idButton1" 
+																text="{i18n>buscar}"
+																icon="sap-icon://search"
+																press="onSearch"
+																visible="{ShowButtonsByRole>/rdBuscar}"
+																width="50%" />
+															<!-- CREAR -->
+															<Label id="IDLabelBtnCrear" text=""/>
+															<Button id="idButton12" 
+																text="{i18n>crearPedido}"
+																icon="sap-icon://cart"
+																press="onCreateOrder"
+																visible="{ShowButtonsByRole>/rdCrear}"
+																width="50%"/>
+														<!--</VBox>-->
+														<!--<VBox>-->
+														<core:Title text=""/>
+															<Label id="IDLabelImg" text=""/>
+															<Image id="idlogview2222" src="./images/logo-dfgrupo.jpg" width="80%" />
+															<!-- INFORMES -->
+															<Label id="IDLabelInformes" text=""/>
+															<Text text="{i18n>informes}" />
+															
+															<!-- ZSD016 -->
+															<Label id="IDLabelBtnOpenZSD016" text=""/>
+															<Button id="idButton21"
+																text="{i18n>carteraPedidos}"
+																icon="sap-icon://wallet"
+																width="80%"
+																press="onZSD016"/>
+																
+															<!-- ZSD014 -->
+															<Label id="IDLabelBtnOpenZSD014" text=""/>
+															<Button id="idButton22"
+																text="{i18n>listadoEntregas}"
+																icon="sap-icon://shipping-status"
+																width="80%"
+																press="onZSD014"/>
+																
+															<!-- ZSD007 -->
+															<Label id="IDLabelBtnOpenZSD007" text=""/>
+															<Button id="idButton23"
+																text="{i18n>gestionVentasDia}"
+																icon="sap-icon://crm-service-manager"
+																width="80%"
+																press="onZSD007"/>
+															<!--</VBox>	-->
+											</f:content>
+										</f:SimpleForm>
+									</l:BlockLayoutCell>
+								</l:BlockLayoutRow>
+								</l:BlockLayout>
+							</content>
+						</Panel>
+						<Panel>
+							<content>
+								<Button text="24.0.9" press="onVersion" class="btnVersion"></Button>
+							</content>
+						</Panel>
+					</content>
+				</Page>
+</mvc:View>

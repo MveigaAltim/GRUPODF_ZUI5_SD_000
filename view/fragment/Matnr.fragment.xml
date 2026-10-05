@@ -1,0 +1,38 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:t="sap.ui.table">
+	<t:Table id="idTable"
+			selectionMode="MultiToggle"
+			selectionBehavior="Row"
+			enableColumnReordering="true"
+			visibleRowCount="7"
+			rows="{materiales>/d/results/}">
+		<t:columns>
+			<t:Column width="9rem"
+				filterProperty="Maktg"
+				sortProperty="Maktg">
+					<Label text="Descripci?n Material" />
+				<t:template>
+					<Text text="{materiales>Maktg}" wrapping="false" />
+				</t:template>
+			</t:Column>
+			<t:Column width="9rem"
+				filterProperty="Spras"
+				sortProperty="Spras">
+					<Label text="Idioma" />
+				<t:template>
+					<Text text="{materiales>Spras}" wrapping="false" />
+				</t:template>
+			</t:Column>
+			<t:Column width="9rem"
+				filterProperty="Matnr"
+				sortProperty="Matnr">
+					<Label text="Mat." />
+				<t:template>
+					<Text text="{materiales>Matnr}" wrapping="false" />
+				</t:template>
+			</t:Column>
+		</t:columns>
+	</t:Table>
+</core:FragmentDefinition>

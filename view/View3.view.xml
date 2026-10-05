@@ -1,0 +1,204 @@
+<mvc:View controllerName="sd_dfgrupo.sd_dfgrupo.controller.View3" displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:t="sap.ui.table">
+	<Page id="view3" showHeader="false">
+		<content>
+			<Panel headerText="{i18n>titleView3}" expanded="true">
+				<content>
+					<l:BlockLayout>
+						<l:BlockLayoutRow id="buttonBar" class="sapUiNoMarginTop sapUiNoMarginBottom sapUiNoMarginBegin sapUiNoContentPadding">
+							<l:BlockLayoutCell>
+								<l:HorizontalLayout>
+									<Button id="idButton3" text="{i18n>volverView2}" icon="sap-icon://navigation-left-arrow"/>
+									<Button id="idButton55" text="{i18n>grabarPedido}" press="calcularPreciosAndSave"/>
+									<Button id="b1" text="{i18n>partidasRiesgCli}" press="onPartidasRiesgoCli"/>
+									<Button id="b2" text="{i18n>partidasAbiertas}" press="onPartidasAbiertas"/>
+									<Button id="b4" text="{i18n>crearDestinatario}" press="onCrearDestinatario"/>
+								</l:HorizontalLayout>
+							</l:BlockLayoutCell>
+						</l:BlockLayoutRow>
+						<l:BlockLayoutRow id="headerData" class="sapUiNoMarginTop sapUiNoMarginBottom sapUiNoMarginBegin sapUiNoContentPadding">
+							<l:BlockLayoutCell>
+								<f:SimpleForm id="sf1" editable="false" layout="ResponsiveGridLayout" title="" labelSpanXL="4" labelSpanL="4" labelSpanM="4" labelSpanS="12"
+									adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="3" columnsM="3"
+									singleContainerFullSize="false">
+									<f:content>
+										<!-- Primer Bloque -->
+										<core:Title text=""/>
+										<Label text="Cliente"/>
+										<Input id="IdclienteF4" 
+											required="true" 
+											showValueHelp="true" 
+											liveChange="onLiveChangeUppercase"
+											change="onChangeKunnr"
+											valueHelpRequest="onF4Cliente"
+											showSuggestion="true" 
+											suggestionItems="{clientes>/d/results/}">
+											<suggestionItems>
+												<core:Item key="{clientes>Kunnr}" text="{clientes>Mcod1}" />
+											</suggestionItems>
+										</Input>
+										<Label text="{i18n>numCliente}"/>
+										<Input id="Idvalorcliente" editable="false"></Input>
+										<Label text="Fecha Pedido"/>
+										<DatePicker id="Idfechaactual" 
+											value="{path:'ModelFecha>/dateValue1', 
+													type:'sap.ui.model.type.Date',
+													formatOptions: { style: 'short', strictParsing: true}}"></DatePicker>
+										<Label text="Condicion Cobro"/>
+										<Input id="IdcondicobroF4" showValueHelp="true" valueHelpRequest="onF4CondCobro" change="onLiveCangeCondicCobro"></Input>
+										<Label text="Condicion Cobro Descripcion"/>
+										<Input id="Idvalcondicobro" editable="false"></Input>
+										<Label text="Fecha Vencimiento"/>
+										<DatePicker id="Idfechacondi"  
+											value="{path:'ModelFecha>/dateValue2', 
+													type:'sap.ui.model.type.Date', 
+													formatOptions: { style: 'short', strictParsing: true}}"></DatePicker>
+										<Label text="Su pedido N"/>
+										<Input id="Idnumpedval" liveChange="onLiveChangeUppercase"></Input>
+										<!-- Segundo Bloque -->
+										<core:Title text=""/>
+										<Label text="{i18n>destiMerca}"/>
+										<Input id="IddestinaF4" liveChange="onLiveChangeUppercase" showValueHelp="true" valueHelpRequest="onF4DestMerc"></Input>
+										<Label text="Dest. Mercancías desc."/>
+										<Input id="Idvalordestina" editable="false"></Input>
+										<Label text="{i18n>codClaseDoc}"/>
+										<Input id="IdclasedocF4" required="true" liveChange="onLiveChangeUppercase" showValueHelp="true" valueHelpRequest="onF4ClaseDoc"></Input>
+										<Label text="{i18n>codClaseDocDesc}"/>
+										<Input id="IdvalclasedocF4" editable="false"></Input>
+										<Label text="Via de Pago"/>
+										<Input id="IdviapagoF4" liveChange="onLiveChangeUppercase" showValueHelp="true" valueHelpRequest="onF4ViaPago"></Input>
+										<Label text="Moneda"/>
+										<Input id="IdmonedaF4" liveChange="onLiveChangeUppercase" showValueHelp="true" valueHelpRequest="onF4Moneda"></Input>
+										<Label text="Comercial"/>
+										<Input id="Idcomercial" editable="false"></Input>
+										<!-- Tercer Bloque -->
+										<core:Title text=""/>
+										<Label text="Precio Almacenaje"/>
+										<Input id="Idprecioalmacenaje"></Input>
+										<Label text="{i18n>almacenPagadoHasta}"/>
+										<DatePicker id="Idalmacenpaga" 
+											value="{path: 'ModelFecha>/dateValue3', 
+													type:'sap.ui.model.type.Date', 
+													formatOptions: { style: 'short', strictParsing: true}}" 
+											change="saveDateAlamacenPagado"></DatePicker>
+										<Label text="{i18n>riesgoMax}"/>
+										<Input id="Idriesgomax" editable="false"></Input>
+										<Label text="Dispuesto"/>
+										<Input id="Idriesgodispu" editable="false"></Input>
+										<Label text="Disponible"/>
+										<Input id="Idriesgodispo" editable="false"></Input>
+									</f:content>
+								</f:SimpleForm>
+							</l:BlockLayoutCell>
+						</l:BlockLayoutRow>
+						<l:BlockLayoutRow id="tableData" class="sapUiNoMarginTop sapUiNoMarginBottom sapUiNoMarginBegin sapUiNoContentPadding"
+							scrollable="true">
+							<l:BlockLayoutCell class="customSize">
+								<!-- Daniel E -->
+								<Table id="tableView3">
+									<headerToolbar>
+										<Toolbar>
+											<content>
+												<Button icon="sap-icon://sys-add" id="idButtonAdd" press="onAddRow" class="customButton"/>
+											</content>
+										</Toolbar>
+									</headerToolbar>
+									<columns>
+										<!-- Las primeras 9 columnas que se mostrarán en la tabla -->
+										<Column hAlign="Center" width="20rem">
+											<Text text="Material"/>
+										</Column>
+										<Column hAlign="Center" width="7rem">
+											<Text text="{i18n>posicion}"/>
+										</Column>
+										<Column hAlign="Center" width="10rem">
+											<Text text="Lugar"/>
+										</Column>
+										<Column hAlign="Center" width="10rem" visible= "{appData>/visibleColumsView3/Zfechaentdesdevisible}" >
+											<Text text= "{appData>/visibleColumsView3/Zfechaentdesdetitle}"/>
+										</Column>
+										<Column hAlign="Center" width="10rem" visible="{appData>/visibleColumsView3/Zfechaenthastavisible}">
+											<Text text= "{appData>/visibleColumsView3/Zfechaenthastatitle}"/>
+										</Column>
+										<Column hAlign="Center" width="7rem">
+											<Text text="Cantidad"/>
+										</Column>
+										<Column hAlign="Center" width="7rem">
+											<Text text="Precio Venta"/>
+										</Column>
+										<Column hAlign="Center" width="7rem" visible="{appData>/visibleColumsView3/ZprecioTarifaVisible}">
+											<Text text="{appData>/visibleColumsView3/ZprecioTarifaTitle}"/>
+										</Column>
+										<Column hAlign="Center" width="7rem" visible="{appData>/visibleColumsView3/Zprecio1Visible}">
+											<Text text="{appData>/visibleColumsView3/Zprecio1Title}"/>
+										</Column>
+										<Column hAlign="Center" width="7rem" visible="{appData>/visibleColumsView3/Zprecio2Visible}">
+											<Text text="{appData>/visibleColumsView3/Zprecio2Title}"/>
+										</Column>
+										<Column hAlign="Center" width="7rem" visible="{appData>/visibleColumsView3/Zmargen1Visible}">
+											<Text text="{appData>/visibleColumsView3/Zmargen1Title}"/>
+										</Column>
+										<Column hAlign="Center" width="7rem" visible="{appData>/visibleColumsView3/Zmargen2Visible}">
+											<Text text="{appData>/visibleColumsView3/Zmargen2Title}"/>
+										</Column>
+										<Column hAlign="Center" width="7rem" visible="{appData>/visibleColumsView3/Zdes2Visible}">
+											<Text text="{appData>/visibleColumsView3/Zdes2Title}"/>
+										</Column>
+										<Column hAlign="Center" width="7rem" visible="{appData>/visibleColumsView3/ZincocifVisible}">
+											<Text text="{appData>/visibleColumsView3/ZincocifTitle}"/>
+										</Column>
+										<Column hAlign="Center" width="7rem" visible="{appData>/visibleColumsView3/ZincofasVisible}">
+											<Text text="{appData>/visibleColumsView3/ZincofasTitle}"/>
+										</Column>
+										<Column hAlign="Center" width="7rem" visible="{appData>/visibleColumsView3/ZporteVisible}">
+											<Text text="{appData>/visibleColumsView3/ZporteTitle}"/>
+										</Column>
+										<Column hAlign="Center" width="7rem" visible="{appData>/visibleColumsView3/ZcondpagoVisible}">
+											<Text text="{appData>/visibleColumsView3/ZcondpagoTitle}"/>
+										</Column>
+										<Column hAlign="Center" width="9rem">
+											<Text text="Lote"/>
+										</Column>
+										<Column hAlign="Center" width="5rem">
+											<Text text="Almacen"/>
+										</Column>
+										<Column hAlign="Center" width="5rem">
+											<Text text="Material"/>
+										</Column>
+										<Column hAlign="Center">
+											<Text text=""/>
+										</Column>
+									</columns>
+									<items></items>
+								</Table>
+							</l:BlockLayoutCell>
+						</l:BlockLayoutRow>
+						<!-- Daniel E -->
+						<l:BlockLayoutRow id="notesData" class="sapUiNoMarginTop sapUiNoMarginBottom sapUiNoMarginBegin sapUiNoContentPadding">
+							<l:BlockLayoutCell>
+								<f:SimpleForm id="sf2" editable="false" layout="ResponsiveGridLayout" title="" labelSpanXL="4" labelSpanL="4" labelSpanM="4" labelSpanS="12"
+									adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="3" columnsM="3"
+									singleContainerFullSize="false">
+									<f:content>
+										<!-- Primer Bloque -->
+										<core:Title text=""/>
+										<Label text="Observaciones por riesgo (No se imprime)"/>
+										<TextArea id="IdObservaValor" height="150px"></TextArea>
+										<!-- Segundo Bloque -->
+										<core:Title text=""/>
+										<Label text="Observaciones Pedido"/>
+										<TextArea id="IdObservapediValor" height="150px"></TextArea>
+										<!-- Tercer Bloque -->
+										<core:Title text=""/>
+										<Label text="{i18n>observGarantia}"/>
+										<TextArea id="IdObservagaranValor" height="150px"></TextArea>
+									</f:content>
+								</f:SimpleForm>
+							</l:BlockLayoutCell>
+						</l:BlockLayoutRow>
+						</l:BlockLayout>
+					</content>
+				</Panel>
+			</content>
+		</Page>
+	</mvc:View>
